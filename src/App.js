@@ -2,6 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function MyTag () {
+  return (
+    <div>{window.innerWidth}</div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +16,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <MyTag />
         <a
           className="App-link"
           href="https://reactjs.org"
