@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HTMLWebPackPlugin = require("html-webpack-plugin")
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   devServer: {
@@ -48,7 +49,6 @@ module.exports = {
       },
       {
         test:  /\.(woff(2)?|ttf|eot|svg|pdf)(\?v=\d+\.\d+\.\d+)?$/,
-        exclude: /node_modules/,
         use: [
           {
             loader: "file-loader"
@@ -66,7 +66,10 @@ module.exports = {
     new HTMLWebPackPlugin({
       template: "./src/index.html",
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new CopyWebpackPlugin([
+      { from: 'src/assets', to: 'assets' }
+    ])
   ],
   resolve: {
     modules: [

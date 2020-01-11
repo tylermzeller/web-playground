@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chess.js": "^0.10.2",
     "classnames": "^2.2.6",
     "eslint": "^6.7.2",
+    "pixi.js": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.18",
     "react-scripts": "3.1.0",
-    "styled-components": "^4.4.1"
+    "remixicon": "^2.1.0",
+    "styled-components": "^4.4.1",
+    "uuid": "^3.3.3"
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.config.js",
@@ -38,6 +42,7 @@
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",

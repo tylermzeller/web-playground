@@ -1,9 +1,10 @@
 import { hot } from 'react-hot-loader'
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './sass/index.css';
-import App from './js/components/App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './sass/index.css'
+import 'remixicon/fonts/remixicon.css'
+import App from './js/components/App'
+import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

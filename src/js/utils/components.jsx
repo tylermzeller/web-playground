@@ -31,8 +31,14 @@ export const compositeDiv = (baseClassName, Child) => {
   }
 }
 
-export const FlexRow = styled(simpleDiv('flex-row'))`
+export const FlexRow = styled.div`
   display: flex;
-`;
+  flex-direction: row;
+`
 
-export const FlexCol = simpleDiv('flex-col')
+export const FlexCol = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+export const NullComponent = () => null
