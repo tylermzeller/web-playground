@@ -21,4 +21,5 @@ export const Content = styled(ContentMarkup)`
   align-items: center;
   justify-content: center;
   flex: 1;
+  overflow: auto;
 `

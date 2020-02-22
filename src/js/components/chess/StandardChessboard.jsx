@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import * as Chess from 'chess.js'
 import {Chessboard} from './Chessboard'
-import {fullHistory} from '../../utils/chess'
+import {fullHistory} from '../../utils/chess_utils'
 import {ChessMoveChannel, NewGameChannel} from '../configure'
 
 const START_POS = new Chess().fen()

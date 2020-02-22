@@ -1,22 +1,11 @@
-import {isString} from 'lodash'
+import isString from 'lodash/isString'
 
 const EventManager = new EventTarget()
 
-export const addListener = (target, listener) => {
-  return EventManager.addEventListener(target, listener)
-}
-
-export const removeListener = (target, listener) => {
-  return EventManager.removeEventListener(target, listener)
-}
-
-export const emitEvent = evt => {
-  EventManager.dispatchEvent(evt)
-}
-
-export const createEvent = (target, params) => {
-  return new CustomEvent(target, {detail: params})
-}
+export const addListener = (target, listener) => EventManager.addEventListener(target, listener)
+export const removeListener = (target, listener) => EventManager.removeEventListener(target, listener)
+export const emitEvent = evt => EventManager.dispatchEvent(evt)
+export const createEvent = (target, params) => new CustomEvent(target, {detail: params})
 
 export class EventSource {
   constructor (nameOrEventSource) {
@@ -35,16 +24,16 @@ export class EventSource {
 
   subscribe (id, handler) {
     this.subscribers[id] = handler
-    EventManager.addEventListener(this.name, handler)
+    addListener(this.name, handler)
   }
 
   unsubscribe (id) {
-    EventManager.removeEventListener(this.name, this.subscribers[id])
+    removeListener(this.name, this.subscribers[id])
   }
 
   publish (data) {
     const event = createEvent(this.name, {detail: data})
-    EventManager.dispatchEvent(event)
+    emitEvent(event)
   }
 }
 

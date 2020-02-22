@@ -1,4 +1,4 @@
-import * as chess from 'chess.js'
+import * as Chess from 'chess.js'
 
 // details of verbose history -> https://github.com/jhlywa/chess.js/blob/master/README.md
 export const fullHistory = (verboseHistory, startingPosition) => {
