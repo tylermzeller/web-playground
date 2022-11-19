@@ -11,7 +11,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.18",
-    "react-scripts": "3.1.0",
+    "react-scripts": "5.0.1",
     "remixicon": "^2.1.0",
     "styled-components": "^4.4.1",
     "uuid": "^3.3.3"
@@ -46,7 +46,7 @@
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
     "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.15",
     "node-sass": "^4.12.0",
@@ -54,7 +54,7 @@
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.0"
   }
 }
